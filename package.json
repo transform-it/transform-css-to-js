@@ -1,9 +1,8 @@
 {
   "name": "transform-css-to-js",
   "version": "0.1.0",
-  "description": "A boilerplate to write plugins in pure JavaScript using ES2015",
-  "main": "dist/lunar.umd.js",
-  "module": "dist/lunar.es.js",
+  "description": "A utility to convert your CSS into JS or React Native compatible styles.",
+  "main": "dist/index.js",
   "files": [
     "dist",
     "src"
