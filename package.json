@@ -1,6 +1,6 @@
 {
-  "name": "javascript-plugin-boilerplate",
-  "version": "0.0.0-semantically-released",
+  "name": "transform-css-to-js",
+  "version": "0.1.0",
   "description": "A boilerplate to write plugins in pure JavaScript using ES2015",
   "main": "dist/lunar.umd.js",
   "module": "dist/lunar.es.js",
@@ -15,11 +15,9 @@
     "test:cover": "nyc ava",
     "test:report": "cat ./coverage/lcov.info | codecov && rm -rf ./coverage",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "build": "npm run build:umd && npm run build:es && npm run build:cjs",
-    "build:umd": "rollup -c rollup.umd.js",
-    "build:es": "rollup -c rollup.es.js",
+    "build": "npm run build:cjs",
     "build:cjs": "rollup -c rollup.cjs.js",
-    "build:watch": "concurrently 'npm run build:umd -- -w' 'npm run build:es -- -w' 'npm run build:cjs -- -w'",
+    "build:watch": "npm run build:cjs -- -w",
     "lint": "eslint src/**/*.js *.js tests/**/*.js",
     "lint:fix": "npm run lint -- -fix",
     "format": "prettier --write src/**/*.js *.js tests/**/*.js",
@@ -34,7 +32,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.24.1",
     "codecov.io": "^0.1.6",
-    "concurrently": "^3.5.0",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^4.2.0",
     "eslint-config-prettier": "^2.3.0",
@@ -71,11 +68,16 @@
       "git add"
     ]
   },
-  "homepage": "https://github.com/ritz078/javascript-plugin-boilerplate",
+  "homepage": "https://github.com/ritz078/transform-css-to-js",
   "ava": {
     "require": [
       "babel-register",
       "babel-polyfill"
     ]
+  },
+  "dependencies": {
+    "css-to-react-native": "^2.0.4",
+    "lodash": "^4.17.4",
+    "stringify-object": "^3.2.0"
   }
 }
