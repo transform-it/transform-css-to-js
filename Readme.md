@@ -11,6 +11,7 @@ npm i transform-css-to-js
 
 ### Usage
 
+```js
 import cssToJS from "transform-css-to-js"
 
 const css = `.main-wrapper {
