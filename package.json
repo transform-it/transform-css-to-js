@@ -1,6 +1,6 @@
 {
   "name": "transform-css-to-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A utility to convert your CSS into JS or React Native compatible styles.",
   "main": "dist/index.js",
   "files": [

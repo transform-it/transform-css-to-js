@@ -164,7 +164,7 @@ function renderJS(items) {
 }
 
 function renderItem(item) {
-  const code = ["\n  //" + item.originalValue];
+  const code = ["\n  // " + item.originalValue];
 
   let properties = [];
 
